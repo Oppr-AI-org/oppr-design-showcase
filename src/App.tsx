@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { Button } from "@/components/ui/button"
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -20,32 +19,13 @@ import { ChartsEnhancedDemo } from "@/components/demo/ChartsEnhancedDemo"
 import { PatternsDemo } from "@/components/demo/PatternsDemo"
 import { SidebarDemo } from "@/components/demo/SidebarDemo"
 import { BrandingDemo } from "@/components/demo/BrandingDemo"
-import { SidebarProvider, Sidebar, SidebarContent, SidebarGroup, SidebarGroupLabel, SidebarGroupContent } from "@/components/ui/sidebar"
+
 
 function App() {
 
   return (
-    <SidebarProvider>
-      <div className="flex min-h-screen w-full bg-background">
-        <Toaster />
-        
-        <Sidebar collapsible="none">
-          <SidebarContent className="bg-sidebar">
-            <SidebarGroup>
-              <SidebarGroupLabel className="text-sm font-medium text-sidebar-foreground/70">
-                Oppr Design System
-              </SidebarGroupLabel>
-              <SidebarGroupContent>
-                <div className="p-4">
-                  <img src="/logo.png" alt="Oppr Logo" className="h-8 w-8 mb-2" />
-                  <p className="text-sm text-muted-foreground">Component Showcase</p>
-                </div>
-              </SidebarGroupContent>
-            </SidebarGroup>
-          </SidebarContent>
-        </Sidebar>
-        
-        <div className="flex-1 flex flex-col overflow-y-auto">
+    <div className="min-h-screen w-full bg-background">
+      <Toaster />
           {/* Header */}
           <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-4">
@@ -219,10 +199,8 @@ function App() {
             <PatternsDemo />
           </TabsContent>
         </Tabs>
-          </div>
-        </div>
       </div>
-    </SidebarProvider>
+    </div>
   )
 }
 
